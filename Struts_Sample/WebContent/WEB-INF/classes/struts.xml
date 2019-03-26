@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC '-//Apache Software Foundation//DTD Struts Configuration 2.0//EN' 
+
+ 'http://struts.apache.org/dtds/struts-2.0.dtd'>
+
+
+	<struts>
+			<!-- 디폴트 매핑 -->
+           <package name="default" namespace="" extends="struts-default">
+
+               
+               <!-- 전체목록 얻어오는 액션 매핑 -->
+
+               <action name="Home" class="action.HomeAction">
+
+                     <result name="SUCCESS">/index.jsp</result>
+
+               </action>
+
+               
+               <!-- 데이터 삭제하는 액션 
+
+                     type에는 페이지 이동하는 방식을 지정한다.
+
+                     redirect 또는  forwarding
+
+                -->
+
+               <action name="deleteAction" class="action.DeleteAction">
+
+                     <result name="success" type="redirectAction">listAction</result>
+
+                     <!-- error인경우의 처리 -->
+
+                     <result name="error">/view/error.jsp</result>
+
+               </action>
+
+           </package>
+
+       </struts>
+
+
+

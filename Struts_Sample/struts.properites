@@ -1,0 +1,13 @@
+struts.enable.DynamicMethodInvocation=true 
+struts.i18n.reload=true //개발자 디버그 모드 설정
+struts.devMode=true
+struts.configuration.xml.reload=true // configuration에서 설정된 모든 xml 다시 로딩해해서 무조건 처리해라. 실무에서는 사용 금지!!
+struts.custom.i18n.resources=globalMessages
+struts.url.http.port=8888 //was의 포트 번호, default는 80
+struts.serve.static=true
+struts.serve.static.browserCache=false
+struts.configuration.files=struts-default.xml,struts-plugin.xml,struts.xml 
+// 여기 설정한 파일들을 로딩
+struts.action.extension=do,action,bit // do, action, bit 확장자로 올때 접근 허용, default는 action
+struts.i18n.encoding=euc-kr //ednoding 타입이 들어올때 euc-kr로 들어온다
+
